@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-   client.user.setActivity("اكتب اي شيئ",{type: 'WATCHING'})
+   client.user.setActivity("Fplay",{type: 'WATCHING'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -37,7 +37,7 @@ const queue = new Map();
  
  
  
-var prefix = "برفكس" 
+var prefix = "F" 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
    
@@ -229,8 +229,9 @@ function play(guild, song) {
     serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
  
-const adminprefix = "$vip";
-const devs = ['274923685985386496'];
+const adminprefix = "F";
+const devs = ['512341605265571840'];
+const devs = [''];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -279,7 +280,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 client.login(process.env.BOT_TOKEN);
 client.on('message', msg => {
 
-    if (msg.content == '$join') {
+    if (msg.content == 'Fjoin') {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
@@ -289,5 +290,5 @@ client.on('message', msg => {
 }
 })
 client.on('ready', () => {
-    client.channels.get("ايدي الروم").join(); 
+    client.channels.get("521197760993689600").join(); 
     });
