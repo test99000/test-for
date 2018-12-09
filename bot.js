@@ -229,7 +229,7 @@ function play(guild, song) {
     serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
  
-const adminprefix = "F";
+const adminprefix = "$vip";
 const devs = ['512341605265571840'];
 const devs = [''];
 client.on('message', message => {
